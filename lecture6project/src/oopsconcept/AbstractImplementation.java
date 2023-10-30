@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public abstract class AbstractImplementation {
 	
-	abstract void customerPin();;
+	abstract void customerPin();
 
 }
 
