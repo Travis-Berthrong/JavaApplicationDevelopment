@@ -8,6 +8,13 @@ public abstract class Company {
     public float wagesPerHour;
     public int no_of_weeks;
 
+    Company() {
+        companyId = 1;
+        companyName = "ABC";
+        wagesPerHour = 10;
+        no_of_weeks = 40;
+    }
+
     abstract void wagesCalculation();
 
 }
@@ -18,8 +25,7 @@ class Employee extends Company {
     public int total_duration;
 
     Employee() {
-        wagesPerHour = 10;
-        no_of_weeks = 40; 
+        super();
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter employee id: ");
         employeeId = sc.nextInt();
@@ -30,7 +36,7 @@ class Employee extends Company {
         sc.close();
     }
     @Override
-    void wagesCalculation() {
+    public void wagesCalculation() {
         float wages = wagesPerHour * no_of_weeks * total_duration;
         System.out.println("Employee Id: " + employeeId);
         System.out.println("Employee Name: " + employeeName);

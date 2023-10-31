@@ -6,7 +6,6 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.io.StringReader;
 
 public class FileExercises {
 
@@ -36,7 +35,6 @@ public class FileExercises {
             }
             bufferedReader.close();
         } catch (FileNotFoundException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
     }
@@ -70,7 +68,6 @@ public class FileExercises {
             fileExercises.readFile();
             fileExercises.offsetRead();
         } catch (IOException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
     }
