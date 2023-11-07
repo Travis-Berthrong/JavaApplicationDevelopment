@@ -24,6 +24,11 @@ public class FileExercises {
             fileWriter.write("Hello, Java programming users.!!");
         }
         fileWriter.close();
+        FileWriter fileWriter2 = new FileWriter("file.txt", true);
+        if (fileWriter2 != null) {
+            fileWriter2.write("Hello, Java programming appended users.!!");
+        }
+        fileWriter2.close();
     }
 
     public void readFile() throws IOException{
@@ -48,15 +53,12 @@ public class FileExercises {
         if (file.canRead()) {
             System.out.println("File can be read!");
             BufferedReader bufferedReader = new BufferedReader(new FileReader(file));
-            StringBuilder result = new StringBuilder();
+            String line = null;
             long offset = 35;
-            int value;
             bufferedReader.skip(offset);
-            while ((value = bufferedReader.read()) != -1) {
-                result.append((char) value);
-            }
+            line = bufferedReader.readLine();
             bufferedReader.close();
-            System.out.println(result);
+            System.out.println(line);
         }
     }
 

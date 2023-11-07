@@ -17,7 +17,7 @@ public class FileExercise {
 			ex.printStackTrace();
 		}
 		//Method 1 - Writing into file
-		FileWriter fileWriter = new FileWriter("C:\\Users\\tbert\\OneDrive\\Documents\\Travis_Classwork\\Java Applications\\NewFile.txt");
+		FileWriter fileWriter = new FileWriter("C:\\Users\\tbert\\OneDrive\\Documents\\Travis_Classwork\\Java Applications\\NewFile.txt", true);
 		fileWriter.append("Java programming is easy!");
 		fileWriter.close();
 		
@@ -74,7 +74,7 @@ public class FileExercise {
 			System.out.println("Enter the content:");
 			bf2 = new BufferedWriter(file2);
 			data2 = sc1.nextLine();
-			while(!data2.contentEquals("/")) {
+			while(!data2.contentEquals("")) {
 				data2 = sc2.nextLine();
 				bf2.write(data2, 0, data2.length());
 				bf2.newLine();
