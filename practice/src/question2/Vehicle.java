@@ -9,7 +9,7 @@ Question – 2
     about the car brand, model, availability of it. Print only the necessary details like the output
     example given
  */
-public abstract class Vehicle {
+abstract class Vehicle {
     void printInfo() {
         System.out.println("Vehicle Details");
     }
